@@ -28,8 +28,8 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.TitleBox = new System.Windows.Forms.TextBox();
-            this.NoteBox = new System.Windows.Forms.TextBox();
+            this.titleBox = new System.Windows.Forms.TextBox();
+            this.noteBox = new System.Windows.Forms.TextBox();
             this.savedNotesGrid = new System.Windows.Forms.DataGridView();
             this.saveButton = new System.Windows.Forms.Button();
             this.loadButton = new System.Windows.Forms.Button();
@@ -40,20 +40,20 @@
             ((System.ComponentModel.ISupportInitialize)(this.savedNotesGrid)).BeginInit();
             this.SuspendLayout();
             // 
-            // TitleBox
+            // titleBox
             // 
-            this.TitleBox.Location = new System.Drawing.Point(12, 27);
-            this.TitleBox.Name = "TitleBox";
-            this.TitleBox.Size = new System.Drawing.Size(248, 20);
-            this.TitleBox.TabIndex = 0;
+            this.titleBox.Location = new System.Drawing.Point(12, 27);
+            this.titleBox.Name = "titleBox";
+            this.titleBox.Size = new System.Drawing.Size(248, 20);
+            this.titleBox.TabIndex = 0;
             // 
-            // NoteBox
+            // noteBox
             // 
-            this.NoteBox.Location = new System.Drawing.Point(12, 73);
-            this.NoteBox.Multiline = true;
-            this.NoteBox.Name = "NoteBox";
-            this.NoteBox.Size = new System.Drawing.Size(248, 261);
-            this.NoteBox.TabIndex = 1;
+            this.noteBox.Location = new System.Drawing.Point(12, 73);
+            this.noteBox.Multiline = true;
+            this.noteBox.Name = "noteBox";
+            this.noteBox.Size = new System.Drawing.Size(248, 261);
+            this.noteBox.TabIndex = 1;
             // 
             // savedNotesGrid
             // 
@@ -133,10 +133,11 @@
             this.Controls.Add(this.loadButton);
             this.Controls.Add(this.saveButton);
             this.Controls.Add(this.savedNotesGrid);
-            this.Controls.Add(this.NoteBox);
-            this.Controls.Add(this.TitleBox);
+            this.Controls.Add(this.noteBox);
+            this.Controls.Add(this.titleBox);
             this.Name = "Form1";
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.savedNotesGrid)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -145,8 +146,8 @@
 
         #endregion
 
-        private System.Windows.Forms.TextBox TitleBox;
-        private System.Windows.Forms.TextBox NoteBox;
+        private System.Windows.Forms.TextBox titleBox;
+        private System.Windows.Forms.TextBox noteBox;
         private System.Windows.Forms.DataGridView savedNotesGrid;
         private System.Windows.Forms.Button saveButton;
         private System.Windows.Forms.Button loadButton;
